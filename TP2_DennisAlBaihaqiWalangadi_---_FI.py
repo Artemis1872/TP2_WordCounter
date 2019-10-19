@@ -128,7 +128,7 @@ def sediaData(data,mode=2):
 
     data = tuple(zip(data[0], data[1]))             # Ubah data ke tuple, dan beri pasangan kuantitas yang paralel dengan list sebelumnya
     if mode == 0:
-        data = sorted(data, key = lambda x: x[0])   # Sort berdasarkan banyak frekuensi kata
+        data = sorted(data, key = lambda x: x[1])   # Sort berdasarkan banyak frekuensi kata
         return data
     if mode == 1:
         data = sorted(data, key = lambda x: x[0])   # Sort berdasarkan alfabet kata-kata
@@ -142,7 +142,7 @@ def grafik(data):
     Menggambar grafik menggunakan matplotlib.pyplot
     '''
 
-    plt.figure(figsize=(8, 8), dpi=80)          # Atur besar canvas default Matplotlib
+    plt.figure(figsize=(8, 8), dpi=80)          # Atur besar canvas default Matplotlib (640x640)px
     plt.title('Frekuensi Kemunculan Kata')      # Atur judul canvas
     plt.xlabel('Frekuensi')                     # Label sumbu x sebagai 'Frekuensi'
     plt.grid(axis='x')                          # Beri garis pada setiap titik di sumbu x, agar mudah dilihat
